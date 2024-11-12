@@ -1,159 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Colors</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<header>
-			<a id="logo" href="/">
-				<div id="logo_ui">UI</div>
-				<div id="logo_colors">Colors</div>
-			</a>
-			<div id="ul_header">
-				<a href="/" class="ul_text">Create</a>
-				<a href="/saved" class="ul_text">Saved</a>
-				<a href="/browse" class="ul_text">Browse</a>
-			</div>
-			<ul></ul>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="ui-flex">
+      <div class="head_fixed">
+        <a id="logo" class="ui-flex" href="/">
+          <div id="logo_ui" class="ui-flex">UI</div>
+          <div id="logo_colors">Colors</div>
+        </a>
+        <div id="ul_header" class="ui-flex">
+          <a href="/" class="ul_text ui-flex">Create</a>
+          <a href="saved.html" class="ul_text ui-flex">Saved</a>
+          <a href="#" class="ul_text ui-flex">Browse</a>
+        </div>
+      </div>
+    </header>
 
-		<div>
-			<div class="section">
-				<div class="section_content">
-					<div class="section_head">
-						<div id="section_head_layout">
-							<div class="saved-colors">
-								<h2 style="text-align: center">Saved Palettes</h2>
-								<div class="saved-palettes">
-									<div class="saved-palette">
-										<div class="palette-bg">
-											<div class="palette-color" style="background-color: #f87171"></div>
-										</div>
-										<div class="palette-bg">
-											<div class="palette-color" style="background-color: #fbbf24"></div>
-										</div>
-										<div class="palette-bg">
-											<div class="palette-color" style="background-color: #34d399"></div>
-										</div>
-										<div class="palette-bg">
-											<div class="palette-color" style="background-color: #60a5fa"></div>
-										</div>
-										<div class="palette-bg">
-											<div class="palette-color" style="background-color: #818cf8"></div>
-										</div>
-									</div>
-								</div>
-							</div>
+    <div class="main-container">
+      <aside class="color-list">
+        <h3>Color List</h3>
+      </aside>
 
-							<div>
-								<div class="search">
-									<div class="searchBar">
-										<input type="text" placeholder="Hexcode" class="s_input_text" />
-										<input type="color" class="s_input_color" />
-									</div>
-								</div>
-							</div>
-						</div>
+      <div class="section">
+        <div class="section_content">
+          <div class="section_head">
+            <div id="section_head_layout">
+              <div class="saved-colors">
+                <div class="palettes">Saved Palettes</div>
 
-						<div class="content">
-							<div>
-								<div class="content_head">
-									<div class="content_text" style="font-weight: 600; font-size: 1.5rem">Color</div>
-									<div class="content_box">
-										<button>Export</button>
-										<button>Save</button>
-									</div>
-								</div>
+                <div class="saved-palette" id="saved-palettes">
+                  <!-- 스켈레톤 팔레트 -->
+                  <div class="palette-bg">
+                    <div class="skeleton-palette"></div>
+                  </div>
+                  <div class="palette-bg">
+                    <div class="skeleton-palette"></div>
+                  </div>
+                  <div class="palette-bg">
+                    <div class="skeleton-palette"></div>
+                  </div>
+                  <div class="palette-bg">
+                    <div class="skeleton-palette"></div>
+                  </div>
+                  <div class="palette-bg">
+                    <div class="skeleton-palette"></div>
+                  </div>
+                </div>
+              </div>
 
-								<div class="color-cards">
-									<div class="color-card" style="background-color: #e5e7eb">
-										<div class="color-info">
-											<div class="color-value">#e5e7eb</div>
-											<div class="color-name">Gray 100</div>
-										</div>
-									</div>
-									<div class="color-card" style="background-color: #d1d5db">
-										<div class="color-info">
-											<div class="color-value">#d1d5db</div>
-											<div class="color-name">Gray 200</div>
-										</div>
-									</div>
-									<div class="color-card" style="background-color: #9ca3af">
-										<div class="color-info">
-											<div class="color-value">#9ca3af</div>
-											<div class="color-name">Gray 400</div>
-										</div>
-									</div>
-									<div class="color-card" style="background-color: #6b7280">
-										<div class="color-info">
-											<div class="color-value">#6b7280</div>
-											<div class="color-name">Gray 600</div>
-										</div>
-									</div>
-									<div class="color-card" style="background-color: #4b5563">
-										<div class="color-info">
-											<div class="color-value">#4b5563</div>
-											<div class="color-name">Gray 800</div>
-										</div>
-									</div>
-								</div>
-								<!-- Saved Colors -->
-							</div>
-							<div style="padding-top: 2rem">
-								<div class="content_head">
-									<div class="content_text" style="font-weight: 600; font-size: 1.5rem">Example</div>
-								</div>
+              <div>
+                <div class="search">
+                  <div class="searchBar">
+                    <input
+                      type="text"
+                      placeholder="Hexcode"
+                      class="input_text"
+                    />
+                    <input type="color" class="input_color" id="colorPicker" />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-								<div class="color-ex">
-									<div class="ex-card">
-										<div class="card-layout">
-											<div class="card-layout-content">
-												<div class="font-medium">Buttons</div>
-											</div>
-										</div>
-										<div class="card-layout-2">
-											<div class="card-content">
-												<div class="cord-ex">
-													<div class="button-ex" style="background-color: #9ca3af">
-														Default
-													</div>
-												</div>
-												<div class="cord-ex">
-													<div class="button-ex" style="background-color: #6b7280">Hover</div>
-												</div>
-												<div class="cord-ex">
-													<div class="button-ex" style="background-color: #4b5563">
-														Active
-													</div>
-												</div>
-												<div class="cord-ex">
-													<div
-														class="button-ex"
-														style="background-color: #e5e7eb; color: #9ca3af">
-														Disabled
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+            <div class="content">
+              <div>
+                <div class="content_head">
+                  <div
+                    class="content_text"
+                    style="font-weight: 600; font-size: 1.5rem"
+                  >
+                    Color
+                  </div>
+                  <div class="content_box">
+                    <button id="saveColorBtn">
+                      <img
+                        id="saveIcon"
+                        src="star-regular.svg"
+                        alt="Save Icon"
+                        width="24"
+                      />
+                    </button>
+                  </div>
+                </div>
 
-		<footer class="footer">
-			<div class="line" />
-			<div class="discript">
-				<span>HANNAM</span>
-				<span>·</span>
-				<span>MIDEA</span><span>·</span><span>LEEGYUWON</span>
-			</div>
-		</footer>
-	</body>
+                <div class="color-cards" id="color-cards">
+                  <!-- 스켈레톤 카드 -->
+                  <div class="skeleton-box"></div>
+                  <div class="skeleton-box"></div>
+                  <div class="skeleton-box"></div>
+                  <div class="skeleton-box"></div>
+                  <div class="skeleton-box"></div>
+                </div>
+              </div>
+              <div style="padding-top: 2rem">
+                <div class="content_head">
+                  <div
+                    class="content_text"
+                    style="font-weight: 600; font-size: 1.5rem"
+                  >
+                    Example
+                  </div>
+                </div>
+
+                <div class="color-ex" id="example-cards">
+                  <!-- 스켈레톤 예시 카드 -->
+                  <div class="skeleton-box"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 오른쪽 저장된 색상 그리드 -->
+      <aside class="saved-grid">
+        <h3>Saved Colors</h3>
+        <div id="savedColorsContainer" class="saved-colors"></div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="line"></div>
+      <div class="discript">
+        <span>HANNAM</span>
+        <span>·</span>
+        <span>MIDEA</span><span>·</span><span>LEEGYUWON</span>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="color.js"></script>
+  </body>
 </html>
